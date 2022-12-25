@@ -2,19 +2,6 @@ import java.util.*;
 
 public class Playground {
     public static void main(String[] args) {
-        String s = "pwwkew";
-        String[] strs = new String[100]; // stores non-repeating substrings in string s
-        int index = 0; // index of the array strs
-        String substring = "";
-        boolean equals = false;
-
-        for ()
-
-        for (int i = 0; i < strs.length; i++) {
-            if (strs[i] != null) {
-                System.out.println(strs[i]);
-            }
-        }
     }
 
     public static int climbStairs(int n) {
@@ -27,37 +14,7 @@ public class Playground {
 
     public static String longestSubstring(String s) {
         // return the longest substring that string s has
-        String[] strs = new String[100]; // stores non-repeating substrings in string s
-        int index = 0; // index of the array strs
-        String substring = s.substring(0, 1);
-        boolean equals = false;
-        for (int i = 0; i < s.length(); i++) {
-            if (equals) {
-                equals = false;
-                strs[index] = substring;
-                index++;
-                substring = s.substring(i, i+1);
-                continue;
-            }
-            for (int j = 0; j < substring.length(); j++) {
-                if (s.substring(i, i+1).equals(substring.substring(j, j+1))) {
-                    equals = true;
-                    break;
-                }
-            }
-            if (equals == false) {
-                substring += s.substring(i, i+1);
-            }
-        }
-        String res = strs[0];
-        for (int i = 1; i < strs.length; i++) {
-            if (strs[i] != null) {
-                if (strs[i].length() > res.length()) {
-                    res = strs[i];
-                }
-            }
-        }
-        return res;
+        return "";
     }
 
     public int fibonacci(int n) {
