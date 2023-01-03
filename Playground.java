@@ -2,8 +2,11 @@ import java.util.*;
 
 public class Playground {
     public static void main(String[] args) {
-        Student Johnson = new Student("Johnson");
-        System.out.println(Johnson.returnName());
+        int[] nums = {-1,1,0,-3,3};
+        int[] res = productExceptSelf(nums);
+        for (int i = 0; i < res.length; i++) {
+            System.out.print( res[i]+" " );
+        }
     }
 
     public static int climbStairs(int n) {
@@ -12,6 +15,45 @@ public class Playground {
         } else {
             return climbStairs(n-1) + climbStairs(n-2);
         }
+    }
+
+    public static int[] productExceptSelf (int nums[]) {
+        /*
+        * Given an array nums. Return an array res such that
+        * res[i] equals to the product of every element of nums except nums[i]
+        *  */
+        int[] ans = new int[nums.length];
+        int product = 1;
+        int[] zeroes = new int[nums.length];
+        int index = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                product *= nums[i];
+            } else {
+                zeroes[index] = i;
+                index++;
+            }
+        }
+        System.out.println(index);
+        for (int i = 0; i < ans.length; i++) {
+            boolean is_zero = false;
+            for (int j = 0; j < index; j++) {
+                if (i == nums[j]) {
+                    is_zero = true;
+                    break;
+                }
+            }
+            if (index > 0) {
+                if (is_zero) {
+                    ans[i] = product / nums[i];
+                } else {
+                    ans[i] = 0;
+                }
+            } else {
+                ans[i] = product / nums[i];
+            }
+        }
+        return ans;
     }
 
     public static String longestSubstring(String s) {
