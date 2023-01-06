@@ -62,7 +62,6 @@ public class Playground {
     }
 
 
-
     
     public int fibonacci(int n) {
         // printing the nth term of fibonacci sequence without using recursion
