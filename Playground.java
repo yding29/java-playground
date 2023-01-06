@@ -2,11 +2,8 @@ import java.util.*;
 
 public class Playground {
     public static void main(String[] args) {
-        int[] nums = {-1,1,0,-3,3};
-        int[] res = productExceptSelf(nums);
-        for (int i = 0; i < res.length; i++) {
-            System.out.print( res[i]+" " );
-        }
+        char c = 'c';
+
     }
 
     public static int climbStairs(int n) {
