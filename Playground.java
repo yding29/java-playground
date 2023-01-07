@@ -28,6 +28,7 @@ public class Playground {
 //                break;
 //            }
 //        }
+        char c = 'c';
 
     }
 

@@ -28,7 +28,17 @@ public class MyQueue {
         }
     }
 
+
+    // polls out the first element of myQueue just like
     public String poll() {
+        String ret = myQueue.pop(); //
+        Stack<String> temp = myQueue;
+        stack.clear();
+
+        // updates the stack in the private field after polling out the 1st element in myQueue
+        while (!temp.empty()) {
+            stack.push(temp.pop());
+        }
         return myQueue.pop();
     }
 
