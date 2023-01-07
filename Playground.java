@@ -2,12 +2,36 @@ import java.util.*;
 
 public class Playground {
     public static void main(String[] args) {
-        int[] nums = {-1,1,0,-3,3};
-        int[] res = productExceptSelf(nums);
-        for (int i = 0; i < res.length; i++) {
-            System.out.print( res[i]+" " );
-        }
+        Queue<String> queue = new LinkedList<>();
+        queue.add("abc");
+        queue.add("d");
+        queue.add("e");
+        MyQueue myQueue = new MyQueue(queue);
+        myQueue.print();
+
+//        String s = "(]";
+//        Stack<Character> stack = new Stack<>();
+//        for (int i = 0; i < s.length(); i++) {
+//            stack.push(s.charAt(i));
+//        }
+//        char temp = stack.peek();
+//        while (stack.empty() == false) {
+//            stack.pop();
+//            if (temp == '[' && stack.peek() !=']') {
+//                System.out.println("false");
+//                break;
+//            } else if (temp == '(' && stack.peek() !=')') {
+//                System.out.println("False");
+//                break;
+//            } else if (temp == '{' && stack.peek() !='}') {
+//                System.out.println("FALSE");
+//                break;
+//            }
+//        }
+
     }
+
+
 
     public static int climbStairs(int n) {
         if (n == 0 || n == 1) {

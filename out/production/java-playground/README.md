@@ -12,3 +12,5 @@ I have already cloned my playground to a local folder on my laptop and now I am 
 
 I am now trying to commit changes to this file by using the terminal in VSCode instead of using the GitHub website.
 
+
+2023 Jan 5: I am trying to push changes (particularly this sentence) to my remote repo.
