@@ -2,35 +2,9 @@ import java.util.*;
 
 public class Playground {
     public static void main(String[] args) {
-        Queue<String> queue = new LinkedList<>();
-        queue.add("abc");
-        queue.add("d");
-        queue.add("e");
-        MyQueue myQueue = new MyQueue(queue);
-        myQueue.print();
-
-//        String s = "(]";
-//        Stack<Character> stack = new Stack<>();
-//        for (int i = 0; i < s.length(); i++) {
-//            stack.push(s.charAt(i));
-//        }
-//        char temp = stack.peek();
-//        while (stack.empty() == false) {
-//            stack.pop();
-//            if (temp == '[' && stack.peek() !=']') {
-//                System.out.println("false");
-//                break;
-//            } else if (temp == '(' && stack.peek() !=')') {
-//                System.out.println("False");
-//                break;
-//            } else if (temp == '{' && stack.peek() !='}') {
-//                System.out.println("FALSE");
-//                break;
-//            }
-//        }
-        char c = 'c';
 
     }
+
 
 
 
