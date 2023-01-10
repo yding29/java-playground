@@ -2,11 +2,33 @@ import java.util.*;
 
 public class Playground {
     public static void main(String[] args) {
+        System.out.println(round(1.56, 1));
+        System.out.println(round(1.4, 1));
+        System.out.println(round(1.56, 0));
+        System.out.println(round(1.4, 0));
 
     }
 
 
-
+    public static double round(double number, int places) {
+        // number is the number that we are rounding
+        // places is the number of decimal places that we wish to reserve
+        if (places == 0) {
+            return (int) number;
+        }
+        double result;
+        int product = 1;
+        for (int i = 0; i < places; i++) {
+            product *= 10;
+        }
+        int remainder = (int) (number * product % product);
+        if (remainder >= 5) {
+            result = (int) (number * product + 1) / (double) (product);
+        } else {
+            result = (int) (number * product) / (double) (product);
+        }
+        return result;
+    }
 
     public static int climbStairs(int n) {
         if (n == 0 || n == 1) {
