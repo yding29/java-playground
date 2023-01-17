@@ -2,13 +2,49 @@ import java.util.*;
 
 public class Playground {
     public static void main(String[] args) {
-        System.out.println(round(1.56, 1));
-        System.out.println(round(1.4, 1));
-        System.out.println(round(1.56, 0));
-        System.out.println(round(1.4, 0));
-
+        int[] height = {1,8,6,2,5,4,8,3,7};
+        System.out.println(maxArea(height));
     }
 
+    public static int maxArea(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int max;
+        if (height[left] < height[right]) {
+            max = (right - left) * (height[left]);
+        } else {
+            max = (right - left) * (height[right]);
+        }
+
+        while (left < right) {
+            if (height[left] <= height[left + 1] && height[right] <= height[right - 1]) {
+                if (height[left] <= height[right]) {
+                    left++;
+                } else {
+                    right--;
+                }
+
+            } else {
+                if (height[left] <= height[left + 1]) {
+                    left++;
+                } else if (height[right] <= height[right - 1]) {
+                    right--;
+                } else {
+                    if (height[left] <= height[right]) {
+                        left++;
+                    } else {
+                        right--;
+                    }
+                }
+            }
+            if (height[left] > height[right] && max < height[right] * (right - left)) {
+                max = height[right] * (right - left);
+            } else if (height[left] > height[right] && max < height[left] * (right - left)) {
+                max = height[left] * (right - left);
+            }
+        }
+        return max;
+    }
 
     public static double round(double number, int places) {
         // number is the number that we are rounding
@@ -33,9 +69,8 @@ public class Playground {
     public static int climbStairs(int n) {
         if (n == 0 || n == 1) {
             return 1;
-        } else {
-            return climbStairs(n-1) + climbStairs(n-2);
         }
+        return climbStairs(n-1) + climbStairs(n-2);
     }
 
     public static int[] productExceptSelf (int nums[]) {
